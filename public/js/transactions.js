@@ -1,37 +1,46 @@
 const myModal = new bootstrap.Modal("#transaction-modal"); 
 let logged = sessionStorage.getItem("Logged");
 const session = localStorage.getItem("session");
-
 let data = {
     transactions: []
 }
 
+checkLogged();
+
 document.getElementById("button-logout").addEventListener("click", logout);
 
-//ADICIONAR LANÇAMENTO.
+//ADICIONAR LANÇAMENTO
 document.getElementById("transaction-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const value = parseFloat(document.getElementById("value-input").value);
     const description = document.getElementById("description-input").value;
     const date = document.getElementById("date-input").value;
-    const type = document.querySelector('input [name="type-input"]:checked').value;
+    const type = document.querySelector('input[name="type-input"]:checked').value;
 
     data.transactions.unshift({
-        value:value, type:type, description:description, date:date
+        value: value, type: type, description: description, date: date
     });
 
     saveData(data);
     e.target.reset();
-    myModal.hide(); 
+    myModal.hide();
 
     getTransactions();
 
-    alert("Lançamento adicionado com sucesso.");
+    alert ("Lançamento adicionado com sucesso.")
 });
 
-checkLogged();
+function logout() {
+    sessionStorage.removeItem("logged");
+    localStorage.removeItem("session");
 
+    window.location.href = "index.html";
+}
+
+function saveData(data) {
+    localStorage.setItem(data.login, JSON.stringify(data));
+}
 
 function checkLogged(){
     if (session) {
@@ -46,7 +55,6 @@ function checkLogged(){
     const dataUser = localStorage.getItem(logged);
     if (dataUser) {
         data = JSON.parse(dataUser);
-
     }
     getTransactions();
 }
@@ -65,7 +73,7 @@ function getTransactions() {
 
             transactionsHtml += `
             <tr>
-            <th scope="row">${item.date}</th>
+                <th scope="row">${item.date}</th>
                 <td>${item.value.toFixed(2)}</td>
                 <td>${type}</td>
                 <td>${item.description}</td>
@@ -76,13 +84,5 @@ function getTransactions() {
     document.getElementById("transactions-list").innerHTML = transactionsHtml;
 }
 
-function logout() {
-    sessionStorage.removeItem("logged");
-    localStorage.removeItem("session");
 
-    window.location.href = "index.html";
-}
 
-function saveData(data) {
-    localStorage.setItem(data.login, JSON.stringify(data));
-}
