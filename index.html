@@ -12,15 +12,15 @@
     <main>
         <div class="container">
             <div class="row vh-100">
-                <div class="col d-flex justify-content-center flex-column my-5">
+                <div class="col d-none d-sm-flex justify-content-center flex-column my-5">
                     <div class="text-login">
                         <p>Organize suas financias de forma fácil.</p>
                         <p>Controle seu dinheiro e investimentos.</p> 
                         <p>Economize e atinja seus objetivos.</p>
                     </div>
                     <div class="text-center">
-                        <img src="./assets/images/pocket.png" class="img-fluid" alt="image pocket" srcset="">
-                        <img src="./assets/images/coins.png" alt="image coins" class="img-fluid d-none d-md-inline coins" srcset="">
+                        <img src="./docs/assets/images/pocket.png" class="img-fluid" alt="image pocket">
+                        <img src="/docs/assets/images/coins.png" alt="image coins" class="img-fluid d-none d-lg-inline coins">
                     </div>
                 </div>
 
@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-center mb-3">
-                                    <img src="./assets/images/nikel-logo.png" alt="Logo Nickel" class="img-fluid" srcset="">
+                                    <img src="./docs/assets/images/nikel-logo.png" alt="Logo Nickel" class="img-fluid">
                                 </div>
                             </div>
                         </div>
@@ -38,19 +38,19 @@
                             <div class="col">
                                 <form id="login-form">
                                     <div class="mb-3">
-                                      <label for="email-input">E-mail</label>
-                                      <input type="email" class="form-control mt-2" id="email-input" aria-describedby="emailHelp" placeholder="Seu email">
-                                      <div id="emailHelp" class="form-text text-muted">Utilize seu e-mail para realizar o login.</div>
+                                        <label for="email-input">E-mail</label>
+                                        <input type="email" class="form-control mt-2" id="email-input" aria-describedby="emailHelp" placeholder="Seu email">
+                                        <div id="emailHelp" class="form-text text-muted">Utilize seu e-mail para realizar o login.</div>
                                     </div>
 
                                     <div class="mb-3">
-                                      <label for="password-input">Senha</label>
-                                      <input type="password" class="form-control mt-2" id="password-input" placeholder="Senha">
+                                        <label for="password-input">Senha</label>
+                                        <input type="password" class="form-control mt-2" id="password-input" placeholder="Senha">
                                     </div>
 
                                     <div class="mb-3 form-check">
-                                      <input type="checkbox" class="form-check-input" id="session-check">
-                                      <label class="form-check-label" for="session-check">Permanecer logado.</label>
+                                        <input type="checkbox" class="form-check-input" id="session-check">
+                                        <label class="form-check-label" for="session-check">Permanecer logado.</label>
                                     </div>
 
                                     <button type="submit" class="btn button-login">Entrar</button>
@@ -61,7 +61,7 @@
                         <div class="row">
                             <div class="col">
                                 <p id="link-conta" class="form-text text-center mt-2" >
-                                   Ainda não tem conta?
+                                    Ainda não tem conta?
                                     <span class="link-defaut" data-bs-toggle="modal" data-bs-target="#register-modal">
                                         Criar uma conta.
                                     </span>
@@ -72,7 +72,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-center mt-5">
-                                    <img src="./assets/images/codai-logo.png" alt="" srcset="">
+                                    <img src="./assets/images/codai-logo.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-center">
-                                    <img src="./assets/images/growdev-logo.png" alt="" srcset="">
+                                    <img src="./assets/images/growdev-logo.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -89,36 +89,36 @@
             </div>
         </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Crie sua conta</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="create-form">
-            <div class="modal-body">
-                <div class="mb-3">
-                  <label for="email-create-input">E-mail</label>
-                  <input type="email" class="form-control mt-2" id="email-create-input" aria-describedby="emailHelp" placeholder="Seu email" required>
-                  <div id="emailHelp" class="form-text text-muted">Utilize seu e-mail para criar a conta.</div>
-                </div>
+    <!-- Modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Crie sua conta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="create-form">
+                <div class="modal-body">
+                    <div class="mb-3">
+                    <label for="email-create-input">E-mail</label>
+                    <input type="email" class="form-control mt-2" id="email-create-input" aria-describedby="emailHelp" placeholder="Seu email" required>
+                    <div id="emailHelp" class="form-text text-muted">Utilize seu e-mail para criar a conta.</div>
+                    </div>
 
-                <div class="mb-3">
-                  <label for="password-create-input">Senha</label>
-                  <input type="password" class="form-control mt-2" id="password-create-input" placeholder="Senha" required>
-                  <div id="emailHelp" class="form-text text-muted">Utilize uma senha fácil de lembrar e anote para não esquecer.</div>
+                    <div class="mb-3">
+                    <label for="password-create-input">Senha</label>
+                    <input type="password" class="form-control mt-2" id="password-create-input" placeholder="Senha" required>
+                    <div id="emailHelp" class="form-text text-muted">Utilize uma senha fácil de lembrar e anote para não esquecer.</div>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn button-default">Criar conta</butto>
-            </div>
-        </form>
-      </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary button-cancel" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn button-default">Criar conta</butto>
+                </div>
+            </form>
+        </div>
+        </div>
     </div>
-  </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
