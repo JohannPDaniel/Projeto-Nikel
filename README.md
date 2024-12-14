@@ -14,7 +14,6 @@ Página de Histórico de Transações: Uma tabela que mostra todas as transaçõ
 
 <img src="./docs/imagens/image-2.png" alt="pagina Transações">
 
-
 Modal para Adicionar Transações: Um formulário que permite ao usuário adicionar uma nova transação com valor, descrição, data e tipo (entrada ou saída).
 
 <img src="./docs/imagens/image-3.png" alt="modal para adicionar transações">
@@ -22,6 +21,10 @@ Modal para Adicionar Transações: Um formulário que permite ao usuário adicio
 <hr>
 
 <h3 align="center">Veja o deploy desta apresentação no seguinte link:</h3>
+
+<div align="center">
+    <a href="https://projeto-nikel-self.vercel.app/">Projeto Níkel</a>
+</div>
 
 ### Tecnologias usadas:
 
@@ -35,16 +38,21 @@ Modal para Adicionar Transações: Um formulário que permite ao usuário adicio
 </div>
 
 ## Como rodar o projeto localmente
+
 1. Clone o repositório:
 
 ```bash
- https://github.com/JohannPDaniel/Projeto-FULL-STACK-1-GROWFLIX-.git
- ```
+https://github.com/JohannPDaniel/Projeto-Nikel.git
+```
+
 2. Navegue até a pasta do projeto:
+
 ```bash
 cd projeto-nikel
 ```
+
 3. Instale a extensão `Live Server` e aperte em `Go Live` localizado na parte inferior direita de seu computador.
+
 ## Contate me
 
 <a href="https://wa.me/5519991069456">
